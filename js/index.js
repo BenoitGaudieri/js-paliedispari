@@ -54,7 +54,7 @@ var pdDiv = document.getElementById("pd-result");
 pdStart.addEventListener("click", function() {
     var pdOutput = "";
     var playerNum = parseInt(prompt("inserisci numero da 1 a 5"));
-    while (playerNum > 5 || playerNum <= 0 || playerNum == NaN) {
+    while (playerNum > 5 || playerNum <= 0 || isNaN(playerNum)) {
         playerNum = parseInt(prompt("per favore inserisci un numero da 1 a 5"));
     }
     console.log(playerNum);
