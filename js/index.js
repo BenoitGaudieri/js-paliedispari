@@ -1,3 +1,5 @@
+// Palindromo
+
 /**
  * Palindromo checker
  */
@@ -12,20 +14,29 @@ function palindromoCheck(str) {
     return false;
 }
 
-var str = prompt("Parola");
-if (palindromoCheck(str) == true) {
-    console.log(`${str} è un palindromo`);
-} else {
-    console.log("Non è un palindromo");
-}
+// Logic
+var paliStart = document.getElementById("button-pali");
+var paliDiv = document.getElementById("pali-result");
+paliStart.addEventListener("click", function() {
+    var str = prompt("Parola");
+    var paliOutput = "";
+    if (palindromoCheck(str) == true) {
+        paliOutput = `<span class="gradient--green"> ${str} è un palindromo`;
+    } else {
+        paliOutput = `<span class="gradient--red">${str} non è un palindromo</span>`;
+    }
+    paliDiv.innerHTML = paliOutput;
+});
 
-// Seconda parte
+// Pari o dispari
+
 /**
- * Random gen max only
+ * Random gen
  */
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
+
 /**
  * Pari o dispari
  */
@@ -36,12 +47,28 @@ function pariDispari(num) {
     return "dispari";
 }
 
-var playerNum = parseInt(prompt("inserisci numero"));
-var playerChoise = prompt("scegli pari o dispari");
-var pc = getRandomInt(10);
+// Logic
 
-if (pariDispari(playerNum + pc) == playerChoise) {
-    console.log("hai vinto");
-} else {
-    console.log("hai perso");
-}
+var pdStart = document.getElementById("button-pd");
+var pdDiv = document.getElementById("pd-result");
+pdStart.addEventListener("click", function() {
+    var pdOutput = "";
+    var playerNum = parseInt(prompt("inserisci numero da 1 a 5"));
+    while (playerNum > 5 || playerNum <= 0 || playerNum == NaN) {
+        playerNum = parseInt(prompt("per favore inserisci un numero da 1 a 5"));
+    }
+    console.log(playerNum);
+
+    var playerChoise = prompt("scegli pari o dispari");
+    var pc = getRandomInt(5);
+    while (playerChoise != ("pari" || "dispari")) {
+        playerChoise = prompt("per favore scegli solo tra pari o dispari");
+    }
+    if (pariDispari(playerNum + pc) == playerChoise) {
+        pdOutput = `<span class="gradient--green p--set-uppercase"> hai vinto!</span>`;
+    } else {
+        pdOutput = `<span class="gradient--red"> hai perso</span>`;
+    }
+
+    pdDiv.innerHTML = pdOutput;
+});

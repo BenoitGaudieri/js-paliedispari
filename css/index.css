@@ -9,7 +9,14 @@ body {
     background: linear-gradient(to right, #fdfbfb, #ebedee 70%);
 }
 
-/* General */
+/* 
+   ____                           _ 
+  / ___| ___ _ __   ___ _ __ __ _| |
+ | |  _ / _ \ '_ \ / _ \ '__/ _` | |
+ | |_| |  __/ | | |  __/ | | (_| | |
+  \____|\___|_| |_|\___|_|  \__,_|_|
+                                     
+*/
 
 .hide {
     opacity: 0;
@@ -38,6 +45,25 @@ body {
     margin: 10px 0;
 }
 
+.p--text-center {
+    text-align: center;
+}
+
+.p--flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+  _____                                        _           
+ |_   _|   _ _ __   ___   __ _ _ __ __ _ _ __ | |__  _   _ 
+   | || | | | '_ \ / _ \ / _` | '__/ _` | '_ \| '_ \| | | |
+   | || |_| | |_) | (_) | (_| | | | (_| | |_) | | | | |_| |
+   |_| \__, | .__/ \___/ \__, |_|  \__,_| .__/|_| |_|\__, |
+       |___/|_|          |___/          |_|          |___/  
+*/
+
 .p--set-title {
     font-weight: 700;
     font-size: 2em;
@@ -51,11 +77,27 @@ body {
     color: #ff5100;
 }
 
-.p--text-center {
-    text-align: center;
+.p--set-italic {
+    font-style: italic;
 }
 
-/* Buttons */
+.p--set-uppercase {
+    text-transform: uppercase;
+}
+
+.p--set-bold-underline {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* 
+  ____        _   _                  
+ | __ ) _   _| |_| |_ ___  _ __  ___ 
+ |  _ \| | | | __| __/ _ \| '_ \/ __|
+ | |_) | |_| | |_| || (_) | | | \__ \
+ |____/ \__,_|\__|\__\___/|_| |_|___/
+                                      
+*/
 .btn {
     cursor: pointer;
     display: inline-block;
@@ -117,7 +159,14 @@ body {
     border-color: #dc3545;
 }
 
-/* Form */
+/* 
+  _____                    
+ |  ___|__  _ __ _ __ ___  
+ | |_ / _ \| '__| '_ ` _ \ 
+ |  _| (_) | |  | | | | | |
+ |_|  \___/|_|  |_| |_| |_|
+                            
+*/
 .form-control {
     display: inline-block;
     height: 48px;
@@ -132,7 +181,14 @@ body {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-/* Main */
+/* 
+  __  __       _       
+ |  \/  | __ _(_)_ __  
+ | |\/| |/ _` | | '_ \ 
+ | |  | | (_| | | | | |
+ |_|  |_|\__,_|_|_| |_|
+                        
+*/
 .wrapper {
     display: flex;
     justify-content: center;
@@ -143,10 +199,18 @@ body {
 .box {
     border-radius: 45px;
     background-color: #f0ece1;
-    min-height: 600px;
-    min-width: 400px;
     margin: 0 30px;
     padding: 20px 25px;
+}
+
+.box__dimensions--standard {
+    min-height: 600px;
+    min-width: 400px;
+}
+
+.box__dimensions--small {
+    min-height: 300px;
+    min-width: 300px;
 }
 
 .box--square {
@@ -182,6 +246,14 @@ body {
     font-size: 49px;
 }
 
+/* 
+   ____               _ _            _       
+  / ___|_ __ __ _  __| (_) ___ _ __ | |_ ___ 
+ | |  _| '__/ _` |/ _` | |/ _ \ '_ \| __/ __|
+ | |_| | | | (_| | (_| | |  __/ | | | |_\__ \
+  \____|_|  \__,_|\__,_|_|\___|_| |_|\__|___/
+                                              
+*/
 .gradient--blue {
     background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
     -webkit-background-clip: text;
@@ -189,7 +261,6 @@ body {
 }
 
 .gradient--red {
-    text-transform: uppercase;
     background: linear-gradient(to right, #d03030 0%, #673308 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -213,36 +284,8 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Animations
-@keyframes bounce {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        transform: translate3d(0, 0, 0);
-    }
-
-    40%,
-    43% {
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        transform: translate3d(0, -30px, 0);
-    }
-
-    70% {
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        transform: translate3d(0, -15px, 0);
-    }
-
-    90% {
-        transform: translate3d(0, -4px, 0);
-    }
+.gradient--orange {
+    background: linear-gradient(to right, #eb0823 0%, #fe8517 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-.bounce {
-    animation-name: bounce;
-    transform-origin: center bottom;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-} */
